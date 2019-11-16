@@ -35,10 +35,11 @@ class Tape():
 
     def __str__(self):
         result: str = ''
-        temp = self.current
+        temp = oldCurrent = self.current
         while temp.prev:
             temp = temp.prev
         while temp:
             result += f'{temp.val} '
             temp = temp.next
+        self.currnet = oldCurrent
         return result
