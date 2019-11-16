@@ -7,8 +7,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(
         description='Run BF code from a file or the command line.')
     parser.add_argument('file', nargs='?',
-        metavar='source.bf', type=str, help='File with bf source code', default=None)
-    parser.add_argument('--cmd', metavar='bfstring', type=str, help='BF string')
+        metavar='source.bf', type=str, help='File with bf source code.', default=None)
+    parser.add_argument( '-c', '--cmd', metavar='cmd', type=str, help='BF code as a string.')
     
     args = parser.parse_args()
     if args.file:
