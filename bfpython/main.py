@@ -1,3 +1,4 @@
+import sys
 import argparse
 from .BFInterpreter import BFInterpreter
 
@@ -16,6 +17,7 @@ if __name__ == "__main__":
     elif args.cmd:
         interpreter.loadProgram(args.cmd)
     else:
-        raise Exception('No file or cmd specified.')
+        print('No file or cmd specified.')
+        sys.exit(1)
 
     interpreter.runProgram()
